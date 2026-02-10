@@ -48,3 +48,16 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+With the new persistence changes this project can use SQLite for storage. To initialize the database run:
+
+```
+pip install -r requirements.txt
+alembic upgrade head
+```
+
+Or start the app which will create tables automatically on first run:
+
+```
+python app.py
+```
